@@ -6,7 +6,11 @@ const year=document.querySelector('.year')
 const make=document.querySelector('.make')
 const model=document.querySelector('.model')
 const fuel=document.querySelector ('.fuel')
+const feature=document.querySelector ('.feature')
 const btn=document.querySelector ('.button')
+const sum=document.querySelector ('.sum')
+const form=document.querySelector ('input_form')
+const resetForm =document.querySelector ('.button1')
 
 const selects =document.querySelectorAll('select')
 selects.forEach ((item,index)=>{
@@ -88,17 +92,45 @@ btn.addEventListener('click', (e) => {
     const fuels = document.querySelectorAll ('.fuel')
     fuels.forEach((item,index)=>{
         if(item.checked){
-            arr.push(+item.value)         
+            arr.push(+item.value)
+            item.checked=false         
         }
     })
     console.log(arr);
     const features = document.querySelectorAll ('.feature')
     features.forEach((item,index)=>{
         if(item.checked){
-            arr.push(+item.value)         
+            arr.push(+item.value) 
+            item.checked=false        
         }
     })
     console.log(arr);
+    const sum =arr.reduce(function (x,y){
+     return x+y;
+    }, 0);
+    document.querySelector('.sum').innerHTML = sum;
+
+    arr=[];
+    year.selectedIndex =[0];
+    make.selectedIndex=[0];
+    model.selectedIndex=[0];
+
+    console.log (arr);
 })
+
+   
+
+
+
+
+ 
+ 
+
+
+
+
+    
+    
+
 
 
