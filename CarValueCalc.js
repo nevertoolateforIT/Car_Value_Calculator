@@ -10,7 +10,6 @@ const feature=document.querySelector ('.feature')
 const btn=document.querySelector ('.button')
 const sum=document.querySelector ('.sum')
 const form=document.querySelector ('input_form')
-const resetForm =document.querySelector ('.button1')
 
 const selects =document.querySelectorAll('select')
 selects.forEach ((item,index)=>{
